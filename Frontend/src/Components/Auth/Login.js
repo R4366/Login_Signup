@@ -16,7 +16,7 @@ const Login = () => {
   });
 
   const onSubmit = async (data) => {
-    try { 
+    try {
       const response = await axios.post(
         "http://localhost:3001/api/auth/login",
         data,
@@ -34,9 +34,12 @@ const Login = () => {
         alert("Login successful!");
         navigate('/userDetails'); // Or any protected route
       }
-    } catch (err) {
-      console.error("Login error:", err.response?.data || err.message);
-      alert(err.response?.data?.message || "Login failed");
+    }
+
+    catch (err) {
+      const errorMsg = err?.response?.data?.message || err.message || "Login failed";
+      console.error("Login error:", err);
+      alert(errorMsg);
     }
   };
 
