@@ -1,44 +1,65 @@
-🖥️ Frontend
-This project was bootstrapped with Create React App.
+⚙️ Tech Stack
+Frontend: React 19
 
-📁 Setup Instructions
-In the project directory, you can run:
+Backend: Node.js, Express, MongoDB
 
-🔧 npm install
-Installs all the dependencies used in the project.
+🤸 Quick Start
+Follow these steps to set up the project locally on your machine.
 
-▶️ npm start
-Runs the app in development mode.
-Open http://localhost:3000 to view it in the browser.
+Prerequisites
+Make sure you have the following installed on your machine:
 
-The page will reload when changes are made.
+Git
 
-Lint errors, if any, will be shown in the console.
+Node.js (includes npm)
 
-🧪 npm test
-Launches the test runner in interactive watch mode.
-Refer to the documentation for more information on running tests.
+Cloning the Repository
+bash
+Copy
+Edit
+git clone https://github.com/R4366/Login_Signup.git
+Backend Setup
+1. Navigate to Backend folder
+bash
+Copy
+Edit
+cd Backend
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+3. Set up environment variables
+Create a .env file in the backend root folder with the following content:
 
-📦 npm run build
-Builds the app for production into the build folder.
-React is bundled in production mode and optimized for best performance.
+ini
+Copy
+Edit
+MONGO_URL=<your_mongo_connection_string>
+JWT_SECRET=<your_jwt_secret_key>
+4. Run the backend server
+bash
+Copy
+Edit
+npm run dev
+Open http://localhost:3001 in your browser to view the backend.
 
-🛠️ Backend
-📁 Setup Instructions
-In the backend project directory, run the following:
+Frontend Setup
+1. Navigate to Frontend folder
+bash
+Copy
+Edit
+cd ../Frontend
+(Adjust the path if your frontend folder is named differently or located elsewhere)
 
-🔧 npm install
-Installs all backend dependencies.
-
-▶️ node app.js
-Runs the backend server in development mode.
-Visit http://localhost:3001 to view the backend.
-
-The server will reload with any file changes.
-
-Check the console for any lint or runtime errors.
-
-📄 Environment Variables
-Create a .env file in the root of your backend directory and add:
-MONGO_URL=
-JWT_SECRET=
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+3. Run the frontend app
+bash
+Copy
+Edit
+npm start
+Open http://localhost:3000 in your browser to view the app.
