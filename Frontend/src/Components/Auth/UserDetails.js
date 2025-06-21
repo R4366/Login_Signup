@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Auth.module.css';
 import axios from 'axios';
+import NumberFact from './NumberFact';
 
 const UserDetails = () => {
   const [user, setUser] = useState(null);
@@ -11,7 +12,6 @@ const UserDetails = () => {
     const fetchUser = async () => {
       const token = localStorage.getItem('token');
       if (!token) {
-        
         navigate('/login');
         return;
       }
@@ -24,11 +24,9 @@ const UserDetails = () => {
         });
 
         console.log('User data from backend:', response.data);
-        
         setUser(response.data.user || response.data);
       } catch (error) {
         console.error('Failed to fetch user details:', error);
-       
         navigate('/login');
       }
     };
@@ -67,6 +65,7 @@ const UserDetails = () => {
         <button onClick={handleLogout} className={styles.submitButton}>
           Logout
         </button>
+        <NumberFact />
       </div>
     </div>
   );
