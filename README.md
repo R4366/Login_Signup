@@ -31,9 +31,7 @@ Edit
 npm install
 3. Set up environment variables
 Create a .env file in the backend root folder with the following content:
-ini
-Copy
-Edit
+Add your MongoDB cluster url and jwt secret key
 MONGO_URL=<your_mongo_connection_string>
 JWT_SECRET=<your_jwt_secret_key>
 4. Run the backend server
